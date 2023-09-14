@@ -26,11 +26,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/apartmentedit/:id" elements={<ApartmentEdit />} /> 
-        <Route path="/apartmentindex" elements={<ApartmentIndex />} /> 
-        <Route path="/apartmentnew" elements={<ApartmentNew />} /> 
-        <Route path="/apartmentshow/:id" elements={<ApartmentShow />} /> 
-        <Route path="/apartmentprotectedindex" elements={<ApartmentProtectedIndex />} /> 
+        <Route path="/apartmentedit/:id" element={<ApartmentEdit />} /> 
+        <Route path="/apartmentindex" element={<ApartmentIndex apartment={apartments} />} /> 
+        <Route path="/apartmentnew" element={<ApartmentNew />} /> 
+        <Route path="/apartmentshow/:id" element={<ApartmentShow />} /> 
+        <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex apartments={apartments} current_user={currentUser} />} /> 
         <Route path="*" element={<NotFound />} />
       </Routes>
     <Footer />
