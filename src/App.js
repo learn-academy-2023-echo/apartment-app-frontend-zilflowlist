@@ -18,7 +18,7 @@ import SignUp from './pages/SignUp'
 function App() {
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
   const [apartments, setApartments] = useState(mockApartments)
-
+  
   return (
    <>
     <Header />
