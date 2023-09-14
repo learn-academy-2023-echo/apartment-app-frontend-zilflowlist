@@ -1,0 +1,9 @@
+.show-container {
+    background-color: #cddcaa;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

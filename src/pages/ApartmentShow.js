@@ -3,14 +3,13 @@ import { useParams } from "react-router-dom"
 import { NavLink } from "react-router-dom"
 import { Button } from "reactstrap"
 
-const ApartmentShow = ({ apartments, currentUser }) => {
+const ApartmentShow = ({ apartments }) => {
   const { id } = useParams()
 
   let selectedApartment = apartments?.find((apartment) => apartment.id === +id)
   return (
-  <main className="apartment-description">
-    {selectedApartment && (
-    <>
+    <div className='show-container'>
+      
       <img
         alt="apt-pic"
         src={selectedApartment.image} />
@@ -25,11 +24,9 @@ const ApartmentShow = ({ apartments, currentUser }) => {
             <h5>Bathrooms: {selectedApartment.bathrooms}</h5>
             <h5>Pets: {selectedApartment.pets}</h5>
           </section>
-     </>
-     )}
-     {currentUser && (
-      <NavLink to={`/apartmentedit/${selectedApartment.id}
-        `} className="nav-link">
+          
+        <div className='show-buttons'>
+      <NavLink to={`/apartmentedit/${selectedApartment.id}`} className="nav-link">
         <Button className='btn1'>
           Edit Listing
         </Button>
@@ -39,8 +36,9 @@ const ApartmentShow = ({ apartments, currentUser }) => {
           Delete Listing
         </Button>
       </NavLink>
-     )}
-    </main>
+      </div>
+      
+      </div>
   )
 }
 

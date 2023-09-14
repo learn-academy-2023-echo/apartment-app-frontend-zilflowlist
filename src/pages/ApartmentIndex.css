@@ -1,0 +1,29 @@
+.apartments-container {
+    min-height: 100vh;
+    background-color: #cddcaa;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+.apartments-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.apartment-card {
+    width: 250px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.apartment-content {
+    text-align: center;
+}
+
+.index-button {
+    margin-top: 20px;
+}
