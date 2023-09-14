@@ -24,13 +24,14 @@ function App() {
     <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/apartmentedit/:id" elements={<ApartmentEdit />} /> 
         <Route path="/apartmentindex" elements={<ApartmentIndex />} /> 
         <Route path="/apartmentnew" elements={<ApartmentNew />} /> 
         <Route path="/apartmentshow/:id" elements={<ApartmentShow />} /> 
         <Route path="/apartmentprotectedindex" elements={<ApartmentProtectedIndex />} /> 
-        <Route path="/login" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     <Footer />
    </>
