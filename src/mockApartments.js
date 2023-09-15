@@ -1,5 +1,6 @@
 let mockApartments = [
     {
+        id: 1,
         street: "Test Lane",
         unit: "7",
         city: "San Deegleby",
@@ -13,6 +14,7 @@ let mockApartments = [
         user_id: 1
     },
     {
+        id: 2,
         street: "Laney test",
         unit: "7",
         city: "Sanny Doogs",
@@ -24,7 +26,7 @@ let mockApartments = [
         pets: "no",
         image: "https://plus.unsplash.com/premium_photo-1683769252575-e986af039184?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
         user_id: 2
-    }
+    },
 ]
 
 export default mockApartments

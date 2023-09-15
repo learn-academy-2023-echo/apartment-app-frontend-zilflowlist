@@ -11,7 +11,7 @@ function Home() {
       </div>
       <div className='home-content'>
         <h2>Welcome to Apartment Finder!</h2> 
-        <p>Looking for you next home? You are on the right spot!</p>
+        <p>Looking for your next home? You are on the right spot!</p>
         </div>
     </div>
   )
