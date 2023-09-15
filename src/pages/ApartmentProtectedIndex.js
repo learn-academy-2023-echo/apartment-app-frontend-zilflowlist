@@ -1,14 +1,14 @@
 import React from 'react'
-import React from 'react'
 import { Card, CardImg, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 import { NavLink } from "react-router-dom"
 
-const ApartmentProtectedIndex = ({ apartments, currentUser }) => {
-  const myApartments = apartments.filter(apartment => currentUser?.id === apartment.user_id)
+const ApartmentProtectedIndex = ({ apartments, current_user }) => {
+  const myApartments = apartments?.filter(apartment => current_user?.id === apartment.user_id)
   console.log(apartments)
   return (
+    <>
     <div className='apartments-container'>
       <h1> Recent Listings </h1>
       <div className='apartments-body'>
@@ -35,6 +35,7 @@ const ApartmentProtectedIndex = ({ apartments, currentUser }) => {
     })}
       </div>
     </div>
+    </>
   )
 }
 

@@ -5,6 +5,7 @@ import './ApartmentIndex.css'
 
 const ApartmentIndex = ({ apartments }) => {
   return (
+    <>
     <div className='apartments-container'>
       <h1> Recent Listings </h1>
       <div className='apartments-body'>
@@ -29,6 +30,7 @@ const ApartmentIndex = ({ apartments }) => {
     })}
       </div>
     </div>
+    </>
   )
 }
 

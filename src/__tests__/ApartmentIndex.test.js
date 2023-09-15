@@ -11,6 +11,7 @@ describe("<ApartmentIndex />", () => {
                 <ApartmentIndex apartments={mockApartments}/>
             </BrowserRouter>
         )
+        screen.debug()
         const images = screen.getAllByRole("img")
         expect(images).toHaveLength(mockApartments.length)
    
