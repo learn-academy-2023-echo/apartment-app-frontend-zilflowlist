@@ -3,8 +3,8 @@ import { Form, FormGroup, Input, Label, Button } from "reactstrap"
 import { useNavigate } from "react-router-dom"
 import './ApartmentNew.css'
 
-const ApartmentNew = ({createApartment, current_user}) => {
-
+const ApartmentNew = ({ createApartment, current_user }) => {
+  
   const navigate = useNavigate()
   const [newApartment, setNewApartment] = useState({
     street: "",
@@ -17,10 +17,10 @@ const ApartmentNew = ({createApartment, current_user}) => {
     image: "",
     user_id: current_user.id
   })
-  
+
 
   const handleChange = (e) => {
-    setNewApartment({ ...newApartment, [e.target.street]: e.target.value })
+    setNewApartment({ ...newApartment, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = () => {
@@ -31,11 +31,11 @@ const ApartmentNew = ({createApartment, current_user}) => {
   return (
     <div className='containerAll'>
       <Form className='form'>
-      <div className='container2'>
-        <div className='containerHead'>
-          <div className='heading'>
-          <h2>Add A New Listing</h2>
-          </div>
+        <div className='container2'>
+          <div className='containerHead'>
+            <div className='heading'>
+              <h2>Add A New Listing</h2>
+            </div>
           </div>
           <div className='form-content'>
             <FormGroup>
@@ -43,36 +43,36 @@ const ApartmentNew = ({createApartment, current_user}) => {
                 Street Name:
               </Label>
               <Input id="street" name="street" placeholder="Enter a street" type="text" onChange={handleChange} value={newApartment.street} />
-            </FormGroup>  
+            </FormGroup>
 
             <FormGroup>
               <Label for="unit">Apartment Number/Unit:</Label>
               <Input id="unit" name="unit" placeholder="Enter Apartment Number/Unit" type="text" onChange={handleChange} value={newApartment.unit} />
-            </FormGroup> 
+            </FormGroup>
 
             <FormGroup>
               <Label for="city">City:</Label>
               <Input id="city" name="city" placeholder="Enter City" type="text" onChange={handleChange} value={newApartment.city} />
-            </FormGroup> 
+            </FormGroup>
 
             <FormGroup>
               <Label for="state">Select State:</Label>
               <Input id="state" name="state" type="text" placeholder='Enter State' onChange={handleChange} value={newApartment.state} />
             </FormGroup>
-              
+
             <FormGroup>
               <Label for="square_footage">Square Footage:</Label>
-              <Input id="square_footage" name="squareFootage" type="number"  placeholder="Enter Square Footage" onChange={handleChange} value={newApartment.squareFootage} />
-            </FormGroup>  
+              <Input id="square_footage" name="square_footage" type="number" placeholder="Enter Square Footage" onChange={handleChange} value={newApartment.squareFootage} />
+            </FormGroup>
 
             <FormGroup>
               <Label for="price">Price:</Label>
-              <Input id="price" name="price" type="text"  placeholder="Enter Price" onChange={handleChange} value={newApartment.price} />
-            </FormGroup> 
+              <Input id="price" name="price" type="text" placeholder="Enter Price" onChange={handleChange} value={newApartment.price} />
+            </FormGroup>
 
             <FormGroup>
-            <Label for="bedrooms">Select Bedrooms:</Label>
-            <Input id="bedrooms" name="bedrooms" type="number" placeholder='Enter number of bedrooms' onChange={handleChange} value={newApartment.bedrooms} />
+              <Label for="bedrooms">Select Bedrooms:</Label>
+              <Input id="bedrooms" name="bedrooms" type="number" placeholder='Enter number of bedrooms' onChange={handleChange} value={newApartment.bedrooms} />
             </FormGroup>
 
             <FormGroup>
@@ -82,29 +82,29 @@ const ApartmentNew = ({createApartment, current_user}) => {
 
             <FormGroup>
               <Label for="pets">Pets Are Allowed:</Label>
-              <Input id="pets" name="pets" placeholder='Enter yes or no' type="text"/>
+              <Input id="pets" name="pets" placeholder='Enter yes or no' type="text" onChange={handleChange} value={newApartment.pets}/>
             </FormGroup>
 
             <FormGroup>
               <Label for="image">
                 Upload Apartment Images:
               </Label>
-              <Input id="image" name="image" placeholder='Upload an image' type="text" />
+              <Input id="image" name="image" placeholder='Upload an image' type="text" onChange={handleChange} value={newApartment.image}/>
             </FormGroup>
-            
+
             <div className='button'>
               <Button onClick={handleSubmit} name="submit" className='add-button'>Create Listing</Button>
             </div>
 
+          </div>
         </div>
-      </div>
       </Form>
     </div>
-      )
-}             
-            
+  )
+}
 
-            
+
+
 
 
 export default ApartmentNew
