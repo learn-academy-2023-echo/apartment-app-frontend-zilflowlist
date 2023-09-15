@@ -30,7 +30,13 @@ function App() {
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} /> 
         <Route path="/apartmentnew" element={<ApartmentNew />} /> 
         <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} /> 
-        <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex apartments={apartments} />} /> 
+        {currentUser && (
+          <Route
+            path="/myapartments"
+            element={<ApartmentProtectedIndex
+              apartments={apartments} 
+              currentUser={currentUser}/>} />
+        )}
         <Route path="*" element={<NotFound />} />
       </Routes>
     <Footer />
