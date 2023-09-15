@@ -3,7 +3,7 @@ import { useParams, NavLink } from "react-router-dom"
 import { Button } from "reactstrap"
 import './ApartmentShow.css'
 
-const ApartmentShow = ({ apartments, current_user }) => {
+const ApartmentShow = ({ apartments, current_user, deleteApartment }) => {
   let { id } = useParams()
 
   const selectedApartment = apartments?.find((apartment) => apartment.id === +id)
@@ -36,8 +36,8 @@ const ApartmentShow = ({ apartments, current_user }) => {
           Edit Listing
         </Button>
       </NavLink>
-      <NavLink to="/apartmentindex">
-        <Button className='btn2'>
+      <NavLink to={"/apartmentindex"} className="nav-link">
+        <Button onClick={() => deleteApartment(selectedApartment?.id)} className='btn2'>
           Delete Listing
         </Button>
       </NavLink>
