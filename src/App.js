@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import mockApartments from "./mockApartments"
-import mockUsers from "./mockUsers"
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ApartmentEdit from './pages/ApartmentEdit';
@@ -54,6 +52,30 @@ const App = () => {
     .catch((errors) => console.log("Apartment create errors:", errors))
   }
 
+  const updateApartment = (apartment, id) => {
+    fetch(`${url}/apartments/${id}`, {
+      body: JSON.stringify(apartment),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then((response) => response.json)
+    .then(() => readApartment())
+    .catch((errors) => console.log("Apartment update errors", errors))
+  }
+
+  const deleteApartment = (id) => {
+    fetch(`${url}/apartments/${id}`, {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+    .then((response) => response.json())
+    .then(() => readApartment())
+    .catch((errors) => console.log("delete errors:", errors))
+  }
 
   const login = (userInfo) => {
     fetch(`${url}/login`, {
@@ -135,9 +157,9 @@ const App = () => {
               apartments={apartments} 
               current_user={currentUser}/>} />
          )}
-        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} current_user={currentUser} />} /> 
+        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} current_user={currentUser} deleteApartment={deleteApartment} />} /> 
         <Route path="/apartmentnew" element={<ApartmentNew createApartment={createApartment} current_user={currentUser} />} /> 
-        <Route path="/apartmentedit/:id" element={<ApartmentEdit />} current_user={currentUser} editApartment={editApartment} apartment={apartments} />
+        <Route path="/apartmentedit/:id" element={<ApartmentEdit current_user={currentUser} updateApartment={updateApartment} apartments={apartments} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     <Footer />

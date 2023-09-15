@@ -25,7 +25,7 @@ const ApartmentNew = ({ createApartment, current_user }) => {
 
   const handleSubmit = () => {
     createApartment(newApartment)
-    navigate("/apartmentindex")
+    navigate("/myapartments")
   }
 
   return (
