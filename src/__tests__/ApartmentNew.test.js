@@ -27,7 +27,7 @@ describe("<ApartmentNew />", () => {
       expect(fCity.getAttribute("for")).toEqual("city")
   
       const fState = screen.getByText("Select State")
-      expect(fState.getAttribute("for")).toEqual("stateSelect")
+      expect(fState.getAttribute("for")).toEqual("state")
 
       const fSquareFootage = screen.getByText("Square Footage")
       expect(fSquareFootage.getAttribute("for")).toEqual("squareFootage")

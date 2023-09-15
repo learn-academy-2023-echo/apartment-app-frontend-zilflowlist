@@ -23,12 +23,12 @@ const ApartmentNew = () => {
               <Label for="street">
                 Street Name
               </Label>
-              <Input id="streetName" name="street" placeholder="Enter a street" type="text" onChange={handleChange} value={newApartment.streetName} />
+              <Input id="street" name="street" placeholder="Enter a street" type="text" onChange={handleChange} value={newApartment.streetName} />
             </FormGroup>  
 
             <FormGroup>
               <Label for="unit">Apartment Number/Unit</Label>
-              <Input id="unit" name="email" placeholder="Enter Apartment Number/Unit" type="text" onChange={handleChange} value={newApartment.unit} />
+              <Input id="unit" name="unit" placeholder="Enter Apartment Number/Unit" type="text" onChange={handleChange} value={newApartment.unit} />
             </FormGroup> 
 
             <FormGroup>
@@ -37,8 +37,8 @@ const ApartmentNew = () => {
             </FormGroup> 
 
             <FormGroup>
-              <Label for="stateSelect">Select State</Label>
-              <Input id="stateSelect" name="stateSelect" type="select" onChange={handleChange} value={newApartment.state}>
+              <Label for="state">Select State</Label>
+              <Input id="state" name="state" type="select" onChange={handleChange} value={newApartment.state}>
                 <option>AL</option>
                 <option>AK</option>
                 <option>AZ</option>
@@ -50,17 +50,17 @@ const ApartmentNew = () => {
               
             <FormGroup>
               <Label for="squareFootage">Square Footage</Label>
-              <Input id="squareFootage" type="number" name="squareFootage" placeholder="Enter Square Footage" onChange={handleChange} value={newApartment.squareFootage} />
+              <Input id="squareFootage" name="squareFootage" type="number"  placeholder="Enter Square Footage" onChange={handleChange} value={newApartment.squareFootage} />
             </FormGroup>  
 
             <FormGroup>
               <Label for="price">Price</Label>
-              <Input id="price" type="text" name="price" placeholder="Enter Price" onChange={handleChange} value={newApartment.price} />
+              <Input id="price" name="price" type="text"  placeholder="Enter Price" onChange={handleChange} value={newApartment.price} />
             </FormGroup> 
 
             <FormGroup>
             <Label for="bedrooms">Select Bedrooms</Label>
-            <Input id="bedroomSelect" name="bedroomSelect" type="select" onChange={handleChange} value={newApartment.bedrooms}>
+            <Input id="bedrooms" name="bedrooms" type="select" onChange={handleChange} value={newApartment.bedrooms}>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -76,7 +76,7 @@ const ApartmentNew = () => {
 
             <FormGroup>
               <Label for="bathrooms">Select Bathrooms</Label>
-              <Input id="bathroomSelect" name="bathroomSelect" type="select" onChange={handleChange} value={newApartment.bathrooms}>
+              <Input id="bathrooms" name="bathrooms" type="select" onChange={handleChange} value={newApartment.bathrooms}>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -92,13 +92,13 @@ const ApartmentNew = () => {
             <br></br>
 
             <FormGroup check>
-              <Input name="radioPets" type="radio"/>
+              <Input name="radioPets1" type="radio"/>
               {' '}
               <Label check>Pets Are Allowed</Label>
             </FormGroup>
 
             <FormGroup check>
-              <Input name="radioPets" type="radio"/>
+              <Input name="radioPets2" type="radio"/>
               {' '}
               <Label check>Pets are Not allowed</Label>
             </FormGroup>
