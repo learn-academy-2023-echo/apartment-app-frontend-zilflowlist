@@ -1,9 +1,44 @@
 .show-container {
     background-color: #cddcaa;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
+    min-height: 100%;
+    text-align: center;
+}
+
+.show-container img {
+    margin-bottom: 10px;
+}
+
+.apt-text {
+    background-color: #889c6d;
+    width: 25%;
+    border-radius: 10px;
+    margin: 0 auto;
+    color: #cddcaa;
+}
+
+.show-container .show-buttons {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+}
+
+.show-buttons .btn1 {
+    margin-right: 10px;
+}
+
+.show-buttons .btn2 {
+    margin-left: 10px;
+}
+
+.show-buttons .btn1:hover {
+    filter: brightness(150%);
+    transition: 0.3s;
+}
+
+.show-buttons .btn2:hover {
+    filter: brightness(150%);
+    transition: 0.3s;
 }

@@ -15,10 +15,11 @@ const ApartmentShow = ({ apartments, current_user }) => {
       <img
         alt="apt-pic"
         src={selectedApartment?.image} style={{width: "400px", height: "400px"}}/>
-      <h3>{selectedApartment?.street} {selectedApartment?.unit}</h3>
       <section className="apt-text">
+      <h3>{selectedApartment?.street} {selectedApartment?.unit}</h3>
             <h5>
-              {selectedApartment?.city}
+              {selectedApartment?.city},
+              &nbsp; 
               {selectedApartment?.state}
             </h5>
             <h5>Square Footage: {selectedApartment?.square_footage}</h5>
@@ -28,7 +29,7 @@ const ApartmentShow = ({ apartments, current_user }) => {
           </section>
           </>
         )}
-       {/* {current_user && (
+       {current_user && (
         <div className='show-buttons'>
       <NavLink to={`/apartmentedit/${selectedApartment?.id}`} className="nav-link">
         <Button className='btn1'>
@@ -41,7 +42,7 @@ const ApartmentShow = ({ apartments, current_user }) => {
         </Button>
       </NavLink>
       </div>
-      )} */}
+      )}
       </main>
   )
 }
