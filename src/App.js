@@ -137,7 +137,7 @@ const App = () => {
          )}
         <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} current_user={currentUser} />} /> 
         <Route path="/apartmentnew" element={<ApartmentNew />} createApartment={createApartment} current_user={currentUser}/> 
-        <Route path="/apartmentedit/:id" element={<ApartmentEdit />} current_user={currUser} editApartment={editApartment} apartment={apartments} /> 
+        <Route path="/apartmentedit/:id" element={<ApartmentEdit />} current_user={currentUser} editApartment={editApartment} apartment={apartments} /> 
         <Route path="*" element={<NotFound />} />
       </Routes>
     <Footer />

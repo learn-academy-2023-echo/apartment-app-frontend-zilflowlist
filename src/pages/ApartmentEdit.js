@@ -3,7 +3,7 @@ import { Form, FormGroup, Input, Label, Button } from "reactstrap"
 import { useNavigate, useParams } from "react-router-dom"
 import './ApartmentNew.css'
 
-const ApartmentEdit = ({editApartment, current_user}) => {
+const ApartmentEdit = ({editApartment, current_user, apartments}) => {
 
   const navigate = useNavigate()
   let {id} = useParams()
