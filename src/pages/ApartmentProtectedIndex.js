@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom"
 
 const ApartmentProtectedIndex = ({ apartments, current_user }) => {
   const myApartments = apartments?.filter(apartment => current_user?.id === apartment.user_id)
-  console.log(apartments)
+  
   return (
     <>
     <div className='apartments-container'>
