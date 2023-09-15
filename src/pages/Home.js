@@ -5,9 +5,14 @@ import aptGif from '../assets/Apt-slide.gif'
 
 function Home() {
   return (
-    <div>
-        <h2>Welcome to Apartment Finder</h2> 
-        <img src={aptGif} />
+    <div className='home-container'>
+      <div className='background-img'>
+        <img src={aptGif} className='home-img' alt='home-img'/>
+      </div>
+      <div className='home-content'>
+        <h2>Welcome to Apartment Finder!</h2> 
+        <p>Looking for you next home? You are on the right spot!</p>
+        </div>
     </div>
   )
 }
